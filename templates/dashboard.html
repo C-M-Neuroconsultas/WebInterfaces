@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- Medik-Helper css-->
+    <link rel="stylesheet" type="text/css" href="static/css/dashboard.css">
+
+    <!-- JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- Chart-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>Medik Helper - Diagnóstico inteligente</title>
+  </head>
+  <body>    
+
+    <div class="d-flex">
+        <div id="sidebar-container" class="bg-primary">
+            <div class="logo">
+                <h4 class="text-light">Medik Helper</h4>
+            </div>
+            <div class="menu">
+                <a href="#" class="d-block text-light p-3"><i class="fas fa-table mr-2"></i>Estadisticas</a>
+                <a href="#" class="d-block text-light p-3"><i class="fas fa-users mr-2"></i>Usuarios</a>
+                <a href="#" class="d-block text-light p-3"><i class="fas fa-hospital mr-2"></i>Establecimientos medicos</a>
+            </div>
+        </div>
+
+        <div class="w-100">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="navbar-user-img img-circle" src="https://graph.facebook.com/66200111/picture?width=64&height=64"> 
+                        <span class="pl-2"> Augusto Montero</span>
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                </div>
+              </nav>
+
+              <div id="content">
+                    <section class="py-3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    <h2 class="font-weight-bold mb-0">Bienvenido Augusto</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="container">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-lg-3 d-flex stat my-3">
+                                            <div class="mx-auto">
+                                                <h6>Médicos</h6>
+                                                <h4>15</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 d-flex stat my-3">
+                                            <div class="mx-auto">
+                                            <h6>Pacientes</h6>
+                                            <h4>115</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 d-flex stat my-3">
+                                            <div class="mx-auto">
+                                            <h6>Cefalea Secundaria</h6>
+                                            <h4>74</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 d-flex stat my-3">
+                                            <div class="mx-auto">
+                                            <h6>Cefalea Primaria</h6>
+                                            <h4>215</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 my-3">
+                                    <div class="card rounded-0">
+                                        <div class="card-header">
+                                            <h6>Diagnóstico de cefalea tensional</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <canvas id="myChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 my-3">
+                                    <div class="card rounded-0">
+                                        <div class="card-header">
+                                            <h6>Diagnósticos</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+              </div>
+        </div>
+    </div> 
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Infrecuente', 'Frecuente', 'Crónica'],
+                datasets: [{
+                    data: [12, 19, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        </script>
+  </body>
+</html>
